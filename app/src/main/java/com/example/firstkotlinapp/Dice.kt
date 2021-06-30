@@ -1,9 +1,7 @@
 package com.example.firstkotlinapp
 
-class Dice {
-    var sides = 6
+class Dice(private val numSides: Int) {
     fun roll(): Int {
-        val randomNumber: Int = (1..6).random()
-        return randomNumber
+        return (1..numSides).random()
     }
 }

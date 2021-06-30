@@ -1,9 +1,9 @@
-package com.example.firstkotlinapp
+ package com.example.firstkotlinapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,17 +11,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button = findViewById<Button>(R.id.button_id)
-        val diceSides = findViewById<TextView>(R.id.textView_sides)
-        val diceRoll = findViewById<TextView>(R.id.textView_roll)
 
-        button?.setOnClickListener(){
-            val myFirstDice = Dice()
-            diceSides.setText(myFirstDice.sides.toString())
+        val diceSides: TextView = findViewById(R.id.textView_sides)
 
-            val diceNumber = myFirstDice.roll().toString()
-
-            diceRoll.setText(diceNumber)
-
+        button.setOnClickListener(){
+            rollDice()
         }
+    }
+
+    private fun rollDice() {
+        val myFirstDice = Dice(6)
+        val diceRoll: TextView = findViewById(R.id.textView_roll)
+        diceRoll.text = myFirstDice.roll().toString()
     }
 }
