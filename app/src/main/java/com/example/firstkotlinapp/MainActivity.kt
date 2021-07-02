@@ -76,4 +76,28 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+/**
+ * Code snippet for practicing classes and inheritance in Kotlin
+ */
+fun main() {
+    val squareCabin = SquareCabin(6)
+    with(squareCabin) {
+        println("Material: ${buildingMaterial}")
+        println("Capacity: ${capacity}")
+        println("Has room? : ${hasRoom()}")
+    }
+}
+
+abstract class Dwelling(private var residents: Int) {
+    abstract val buildingMaterial: String
+    abstract val capacity: Int
+
+    fun hasRoom(): Boolean {
+        return residents < capacity
+    }
+}
+class SquareCabin(residents: Int) : Dwelling(residents) {
+    override val buildingMaterial = "wood"
+    override val capacity = 6
+}
 
