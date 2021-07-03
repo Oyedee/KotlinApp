@@ -6,6 +6,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+import kotlin.math.PI
+import kotlin.math.sqrt
+
 /**
  * This activity allows the user to roll a dice and view the result
  * on the screen.
@@ -82,9 +85,6 @@ class MainActivity : AppCompatActivity() {
  * Create class hierarchy, variables and functions with inheritance,
  * abstract class, overriding, and private vs. public variables.
  */
-
-import kotlin.math.PI
-import kotlin.math.sqrt
 
 fun main() {
     val squareCabin = SquareCabin(6, 50.0)
