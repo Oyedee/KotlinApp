@@ -73,5 +73,25 @@ class ListActivity {
             index++
         }
         println("Total Guest Count: $totalGuests")
+
+        /***
+         * For Loops!
+         */
+        val names = listOf<String>("Hamid", "Oyempemi", "Oyedele", "Porayman")
+        for (name in names) {
+            println(name)
+            //prints name with the number of characters in it
+            println("$name - Number of Characters: ${name.length}")
+
+            for (item in names) print(item) // Iterate over items in a list
+
+            for (item in 'b'..'g') print(item) // Range of characters in an alphabet
+
+            for (item in 1..5) print(item) // Range of numbers
+
+            for (item in 5 downTo 1) print(item) // Going backward
+
+            for (item in 3..6 step 2) print(item) // Prints: 35
+        }
     }
 }
